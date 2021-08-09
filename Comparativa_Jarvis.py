@@ -79,7 +79,7 @@ def cost_compra():
     col2.header("Jarvis Hidràulica")
     pres_hidr=Image.open('Pressupost Hidràulica.PNG')
     col2.image(pres_hidr,width=250)
-    col2.markdown('El cost de compra és de ** 14.423 €**')
+    col2.markdown('El cost de compra és de ** 11.920 €**')
 def cost_manteniment():
     st.title('Cost de Manteniment')
     col3,col4=st.beta_columns(2)
@@ -105,15 +105,15 @@ def comparativa():
     st.markdown('# Comparativa')
     Columnes=['Pneumàtica','Hidràulica']
     Files=['Cost Compra','Cost Manteniment','Cost Energètic']
-    valors=[[2800,14423],[2200,3571],[693,400]]
+    valors=[[2800,11920],[2200,3571],[693,400]]
     df=pd.DataFrame(valors,columns=Columnes,index=Files)
     st.write(df)
     st.markdown("# Amortització ")
     st.markdown("Considerant un horitzó de 5 anys per Hidràulica i 2 anys pneumàtica:")
-    valor=[14423/5,2800/2]
+    valor=[11920/5,2800/2]
     amort=pd.DataFrame(valor,Columnes)
     st.write(amort)
-    st.markdown("** Per igualar l'amortització de la serra pneumàtica cal 10 anys de la hidràulica **")
+    st.markdown("** Per igualar l'amortització de la serra pneumàtica cal 8,5 anys de la hidràulica **")
     
 
 def costos():
